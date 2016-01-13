@@ -1,0 +1,82 @@
+
+{% include 'show_2016/base_start.html' %}
+
+
+<blockquote>
+
+  <h1>PVPS 2016 Judged Show</h1>
+
+  <h2>Picture List by {{ sortkey }}</h2>
+
+  <br>
+
+  There are {{ totalentries }} Entry Forms.<br><br>
+  There are {{ totalpics }} pictures entered.<br><br>
+  That gives ${{ income }} income.<br>
+  
+  <br>
+
+{% if all_rows %}
+
+
+    {% include 'show_2016/pics_table_start.html' %}
+      {% for row in all_rows %}
+        {% include 'show_2016/pics_table_one_row.html' %}
+      {% endfor %}
+    {% include 'show_2016/pics_table_finish.html' %}
+
+
+
+{% include 'show_2016/base_start.html' %}
+
+
+<blockquote>
+
+  <h1>PVPS 2016 Judged Show</h1>
+
+  <h2>Picture List by {{ sortkey }}</h2>
+
+  <br>
+
+  There are {{ totalentries }} Entry Forms.<br><br>
+  There are {{ totalpics }} pictures entered.<br><br>
+  That gives ${{ income }} income.<br>
+  
+  <br>
+
+{% if all_rows %}
+
+
+    {% include 'show_2016/pics_table_start.html' %}
+      {% for row in all_rows %}
+        {% include 'show_2016/pics_table_one_row.html' %}
+      {% endfor %}
+    {% include 'show_2016/pics_table_finish.html' %}
+
+
+{% else %}
+
+  <p>
+    There are no entries yet.<br>
+  </p>
+
+{% endif %}
+
+</blockquote>
+
+<br><br>
+
+{% include 'show_2016/base_finish.html' %}
+
+  <p>
+    There are no entries yet.<br>
+  </p>
+
+{% endif %}
+
+</blockquote>
+
+<br><br>
+
+{% include 'show_2016/base_finish.html' %}
+

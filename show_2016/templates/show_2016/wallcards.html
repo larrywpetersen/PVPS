@@ -1,0 +1,69 @@
+
+{% include 'show_2016/base_start.html' %}
+
+
+<blockquote>
+
+  Wall Cards
+  <br><br>
+
+
+{% if all_pics %}
+
+  {% for pic in all_pics %}
+
+
+  <table class="wall">
+
+
+<!--
+  <table width="100%" border="3" cellpadding="20" cellspacing="10">
+  -->
+    
+    <tr>
+
+      <td class="wall"><br>
+	Title:&nbsp;&nbsp;
+	<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ pic.title|ljust:"50" }}
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u><br><br>
+	Category:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>&nbsp;&nbsp;{{ pic.category }}
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>
+	&nbsp;&nbsp;Creator:&nbsp;&nbsp;<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  {{ pic.entrant }}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u><br><br>
+	Price:&nbsp;&nbsp;<u>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</u>
+	<br><br>
+      </td>
+    </tr>
+
+  </table>
+
+
+  {% if forloop.counter|divisibleby:4 %}
+
+  <span class="pagebreak"> </span>
+
+  {% endif %}
+
+
+  {% endfor %}
+
+    </tr>
+  </table>
+  
+
+{% else %}
+
+  <p>
+    There are no entries yet.<br>
+  </p>
+
+{% endif %}
+
+</blockquote>
+
+  <span class="pagebreak"> </span>
+
+{% include 'show_2016/base_finish.html' %}
+
