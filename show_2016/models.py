@@ -36,6 +36,14 @@ class Entries( models.Model):
     pic6_category = models.CharField( max_length=50, default="" )
     pic7_category = models.CharField( max_length=50, default="" )
     pic8_category = models.CharField( max_length=50, default="" )
+    pic1_price = models.CharField( max_length=30, default="")
+    pic2_price = models.CharField( max_length=30, default="")
+    pic3_price = models.CharField( max_length=30, default="")
+    pic4_price = models.CharField( max_length=30, default="")
+    pic5_price = models.CharField( max_length=30, default="")
+    pic6_price = models.CharField( max_length=30, default="")
+    pic7_price = models.CharField( max_length=30, default="")
+    pic8_price = models.CharField( max_length=30, default="")
     date = models.DateTimeField( default=timezone.now() )
     def name_string( self):
         return self.name

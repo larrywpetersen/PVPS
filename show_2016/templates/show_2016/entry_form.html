@@ -17,12 +17,12 @@
 
   {% csrf_token %}
 
-  <table border="0" width="80%">
+  <table border="0" width="90%">
 
     <tr>
       <td align="right">
 	<label for="1">Name:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan="3">
 	<input type="text" name="name" id="1" />
       </td>
     </tr>
@@ -30,7 +30,7 @@
     <tr>
       <td align="right">
 	<label for="2">Address:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan="3">
 	<input type="text" name="address" id="2" />
       </td>
     </tr>
@@ -38,7 +38,7 @@
     <tr>
       <td align="right">
 	<label for="3">City:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan="3">
 	<input type="text" name="city" id="3" />
       </td>
     </tr>
@@ -46,7 +46,7 @@
     <tr>
       <td align="right">
 	<label for="4">State:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan="3">
 	<input type="text" name="state" id="4" />
       </td>
     </tr>
@@ -54,7 +54,7 @@
     <tr>
       <td align="right">
 	<label for="5">Zip:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan="3">
 	<input type="text" name="zip" id="5" />
       </td>
     </tr>
@@ -62,7 +62,7 @@
     <tr>
       <td align="right">
 	<label for="6">email:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan="3">
 	<input type="text" name="email" id="6" />
       </td>
     </tr>
@@ -70,43 +70,52 @@
     <tr>
       <td align="right">
 	<label for="7">Phone Number:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan="3">
 	<input type="text" name="phone" id="7" />
       </td>
     </tr>
 
-    <tr><td>&nbsp;</td><td colspan="2">&nbsp;</td></tr>
+    <tr><td>&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+
+
+    <tr>
+      <td align="center">&nbsp;</td>
+      <td align="center">Title</td>
+      <td align="center">Category</td>
+      <td align="center">Price</td>
+    </tr>
 
 {% for i in entry_list %}
 
-    <tr>
+    <tr valign="middle" height="30">
       <td align="right">
 	<label for="1{{ i }}">
-	  Picture {{ i }}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
-	  Title:&nbsp;&nbsp;</label>
+	  {{ i }}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
+	  </label>
       </td><td>
 	<input type="text" name="pic{{ i }}_title" id="1{{ i }}" />
       </td><td>
-	Category:&nbsp;&nbsp;
 	<select name="pic{{ i }}_category">
 	  {% for category in all_categories %}
 	    <option value="{{ category.id }}">
 	             {{ category.name_string }}</option>
 	  {% endfor %}
 	</select>
-
+      </td>
+      <td>
+	<input type="text" name="pic{{ i }}_price" id="2{{ i }}" />
       </td>
     </tr>
 
 {% endfor %}
 
 
-    <tr><td>&nbsp;</td><td colspan="2">&nbsp;</td></tr>
+    <tr><td>&nbsp;</td><td colspan="3">&nbsp;</td></tr>
 
     <tr>
       <td>
 	&nbsp;
-      </td><td>
+      </td><td colspan="3">
 	<input type="submit" value="Submit Entry"
       </td>
     </tr>

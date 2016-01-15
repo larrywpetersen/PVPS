@@ -39,27 +39,35 @@ def entry_action( request):
      if ( len( entry.pic1_title) > 0):
           catid = request.POST[ 'pic1_category']
           entry.pic1_category = Categories.objects.get( id=catid).name_string()
+          entry.pic1_price = request.POST[ 'pic1_price' ]
      if ( len( entry.pic2_title) > 0):
           catid = request.POST[ 'pic2_category']
           entry.pic2_category = Categories.objects.get( id=catid).name_string()
+          entry.pic2_price = request.POST[ 'pic2_price' ]
      if ( len( entry.pic3_title) > 0):
           catid = request.POST[ 'pic3_category']
           entry.pic3_category = Categories.objects.get( id=catid).name_string()
+          entry.pic3_price = request.POST[ 'pic3_price' ]
      if ( len( entry.pic4_title) > 0):
           catid = request.POST[ 'pic4_category']
           entry.pic4_category = Categories.objects.get( id=catid).name_string()
+          entry.pic4_price = request.POST[ 'pic4_price' ]
      if ( len( entry.pic5_title) > 0):
           catid = request.POST[ 'pic5_category']
           entry.pic5_category = Categories.objects.get( id=catid).name_string()
+          entry.pic5_price = request.POST[ 'pic5_price' ]
      if ( len( entry.pic6_title) > 0):
           catid = request.POST[ 'pic6_category']
           entry.pic6_category = Categories.objects.get( id=catid).name_string()
+          entry.pic6_price = request.POST[ 'pic6_price' ]
      if ( len( entry.pic7_title) > 0):
           catid = request.POST[ 'pic7_category']
           entry.pic7_category = Categories.objects.get( id=catid).name_string()
+          entry.pic7_price = request.POST[ 'pic7_price' ]
      if ( len( entry.pic8_title) > 0):
           catid = request.POST[ 'pic8_category']
           entry.pic8_category = Categories.objects.get( id=catid).name_string()
+          entry.pic8_price = request.POST[ 'pic8_price' ]
      entry.date = timezone.now()
      entry.save()
      context = {}
@@ -129,6 +137,7 @@ class Picture( ):
      category = 'category'
      entrant = 'entrant'
      entry_id = 0
+     price = ''
      def __init__( self, title, cat):
           self.title = title
           self.category = cat
@@ -148,48 +157,56 @@ def build_pic_list():
                pic = Picture( entry.pic1_title, entry.pic1_category)
                pic.entrant = entry.name_string()
                pic.entry_id = entry.id
+               pic.price = entry.pic1_price
                all_pics.append( pic)
           if len( entry.pic2_title) > 0:
                totalpics = totalpics + 1
                pic = Picture( entry.pic2_title, entry.pic2_category)
                pic.entrant = entry.name_string()
                pic.entry_id = entry.id
+               pic.price = entry.pic2_price
                all_pics.append( pic)
           if len( entry.pic3_title) > 0:
                totalpics = totalpics + 1
                pic = Picture( entry.pic3_title, entry.pic3_category)
                pic.entrant = entry.name_string()
                pic.entry_id = entry.id
+               pic.price = entry.pic3_price
                all_pics.append( pic)
           if len( entry.pic4_title) > 0:
                totalpics = totalpics + 1
                pic = Picture( entry.pic4_title, entry.pic4_category)
                pic.entrant = entry.name_string()
                pic.entry_id = entry.id
+               pic.price = entry.pic4_price
                all_pics.append( pic)
           if len( entry.pic5_title) > 0:
                totalpics = totalpics + 1
                pic = Picture( entry.pic5_title, entry.pic5_category)
                pic.entrant = entry.name_string()
                pic.entry_id = entry.id
+               pic.price = entry.pic5_price
                all_pics.append( pic)
           if len( entry.pic6_title) > 0:
                totalpics = totalpics + 1
                pic = Picture( entry.pic6_title, entry.pic6_category)
                pic.entrant = entry.name_string()
                pic.entry_id = entry.id
+               pic.price = entry.pic6_price
                all_pics.append( pic)
           if len( entry.pic7_title) > 0:
                totalpics = totalpics + 1
                pic = Picture( entry.pic7_title, entry.pic7_category)
                pic.entrant = entry.name_string()
                pic.entry_id = entry.id
+               pic.price = entry.pic7_price
                all_pics.append( pic)
           if len( entry.pic8_title) > 0:
                totalpics = totalpics + 1
                pic = Picture( entry.pic8_title, entry.pic8_category)
                pic.entrant = entry.name_string()
                pic.entry_id = entry.id
+               pic.price = entry.pic8_price
                all_pics.append( pic)
      result = {}
      result[ 'totalentries' ] = totalentries

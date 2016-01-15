@@ -17,7 +17,7 @@
     <tr>
       <td align="right">
 	<label for="1">Name:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan"3">
 	{{ entry.name_string }}
       </td>
     </tr>
@@ -25,7 +25,7 @@
     <tr>
       <td align="right">
 	<label for="1">Address:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan"3">
 	{{ entry.address }}
       </td>
     </tr>
@@ -33,7 +33,7 @@
     <tr>
       <td align="right">
 	<label for="3">City:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan"3">
 	{{ entry.city }}
       </td>
     </tr>
@@ -41,7 +41,7 @@
     <tr>
       <td align="right">
 	<label for="4">State:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan"3">
 	{{ entry.state }}
       </td>
     </tr>
@@ -49,7 +49,7 @@
     <tr>
       <td align="right">
 	<label for="5">Zip:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan"3">
 	{{ entry.zip }}
       </td>
     </tr>
@@ -57,7 +57,7 @@
     <tr>
       <td align="right">
 	<label for="5">email:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan"3">
 	{{ entry.email }}
       </td>
     </tr>
@@ -65,98 +65,115 @@
     <tr>
       <td align="right">
 	<label for="5">Phone:&nbsp;&nbsp;</label>
-      </td><td align="left" colspan="2">
+      </td><td align="left" colspan"3">
 	{{ entry.phone }}
       </td>
     </tr>
 
-    <tr height="30"><td colspan="3"></td></tr>
+    <tr height="30"><td colspan="4"></td></tr>
+
+
+    <tr>
+      <td align="left">&nbsp;</td>
+      <td align="left">Title</td>
+      <td align="left">Category</td>
+      <td align="left">Price</td>
+    </tr>
+
 
     <tr>
       <td align="right">
-	<label>Title 1:&nbsp;&nbsp;</label>
+	1&nbsp;&nbsp;-&nbsp;&nbsp;
       </td><td align="left">
 	<u>&nbsp;&nbsp;{{ entry.pic1_title }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td><td align="left">
-	Category 1:&nbsp;&nbsp;
 	<u>&nbsp;&nbsp;{{ entry.pic1_category }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
+      </td><td align="left">
+	<u>&nbsp;&nbsp;{{ entry.pic1_price }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td>
     </tr>
-    
+
     <tr>
       <td align="right">
-	<label>Title 2:&nbsp;&nbsp;</label>
+	2&nbsp;&nbsp;-&nbsp;&nbsp;
       </td><td align="left">
 	<u>&nbsp;&nbsp;{{ entry.pic2_title }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td><td align="left">
-	Category 2:&nbsp;&nbsp;
 	<u>&nbsp;&nbsp;{{ entry.pic2_category }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
+      </td><td align="left">
+	<u>&nbsp;&nbsp;{{ entry.pic2_price }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td>
     </tr>
 
     <tr>
       <td align="right">
-	<label>Title 3:&nbsp;&nbsp;</label>
+	3&nbsp;&nbsp;-&nbsp;&nbsp;
       </td><td align="left">
 	<u>&nbsp;&nbsp;{{ entry.pic3_title }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td><td align="left">
-	Category 3:&nbsp;&nbsp;
 	<u>&nbsp;&nbsp;{{ entry.pic3_category }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
+      </td><td align="left">
+	<u>&nbsp;&nbsp;{{ entry.pic3_price }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td>
     </tr>
 
     <tr>
       <td align="right">
-	<label>Title 4:&nbsp;&nbsp;</label>
+	4&nbsp;&nbsp;-&nbsp;&nbsp;
       </td><td align="left">
 	<u>&nbsp;&nbsp;{{ entry.pic4_title }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td><td align="left">
-	Category 4:&nbsp;&nbsp;
 	<u>&nbsp;&nbsp;{{ entry.pic4_category }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
+      </td><td align="left">
+	<u>&nbsp;&nbsp;{{ entry.pic4_price }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td>
     </tr>
 
     <tr>
       <td align="right">
-	<label>Title 5:&nbsp;&nbsp;</label>
+	5&nbsp;&nbsp;-&nbsp;&nbsp;
       </td><td align="left">
 	<u>&nbsp;&nbsp;{{ entry.pic5_title }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td><td align="left">
-	Category 5:&nbsp;&nbsp;
 	<u>&nbsp;&nbsp;{{ entry.pic5_category }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
+      </td><td align="left">
+	<u>&nbsp;&nbsp;{{ entry.pic5_price }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td>
     </tr>
 
     <tr>
       <td align="right">
-	<label>Title 6:&nbsp;&nbsp;</label>
+	6&nbsp;&nbsp;-&nbsp;&nbsp;
       </td><td align="left">
 	<u>&nbsp;&nbsp;{{ entry.pic6_title }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td><td align="left">
-	Category 6:&nbsp;&nbsp;
 	<u>&nbsp;&nbsp;{{ entry.pic6_category }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
+      </td><td align="left">
+	<u>&nbsp;&nbsp;{{ entry.pic6_price }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td>
     </tr>
 
     <tr>
       <td align="right">
-	<label>Title 7:&nbsp;&nbsp;</label>
+	7&nbsp;&nbsp;-&nbsp;&nbsp;
       </td><td align="left">
 	<u>&nbsp;&nbsp;{{ entry.pic7_title }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
-      </td><td align="left">
-	Category 7:&nbsp;&nbsp;
+      </td><td align="left"
 	<u>&nbsp;&nbsp;{{ entry.pic7_category }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
+      </td><td align="left">
+	<u>&nbsp;&nbsp;{{ entry.pic7_price }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td>
     </tr>
 
     <tr>
       <td align="right">
-	<label>Title 8:&nbsp;&nbsp;</label>
+	8&nbsp;&nbsp;-&nbsp;&nbsp;
       </td><td align="left">
 	<u>&nbsp;&nbsp;{{ entry.pic8_title }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
+      </td><td align="left"
+	<u>&nbsp;&nbsp;{{ etry.pic8_category }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td><td align="left">
-	Category 8:&nbsp;&nbsp;
-	<u>&nbsp;&nbsp;{{ entry.pic8_category }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
+	<u>&nbsp;&nbsp;{{ entry.pic8_price }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
       </td>
     </tr>
 
@@ -167,7 +184,7 @@
     <tr>
       <td align="right">
 	Entries:&nbsp;&nbsp;
-      <td align="left" colspan="2">
+      <td align="left" colspan"3">
 	 <u>&nbsp;&nbsp;{{ entry.num_pics }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
 	 &nbsp;X $9&nbsp;&nbsp;=
 	 <u>&nbsp;&nbsp;${{ entry.entry_fee }}&nbsp;&nbsp;&nbsp;&nbsp;</u>
