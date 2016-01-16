@@ -1,12 +1,19 @@
 
 body {
     background: #f8efff ;
+#    font-size: 13pt;
 }
 
 
 h1  {
     color: #600080 ;
-    font_size: 40px;
+#    font-size: 200%;
+}
+
+
+h2  {
+    color: #600080 ;
+#    font-size: 150%;
 }
 
 
@@ -51,7 +58,7 @@ th.list, td.list  {
     vertical-align: middle;
     text-align: center;
     border: 1px solid black;
-    padding: 15px;    
+    padding: 15px;
 }
 
 th.list {
