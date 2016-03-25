@@ -123,10 +123,11 @@ def print_wallcards( request):
      return render( request, 'show_2016/wallcards.html', context)
 
 
-def print_backtags( request):
-     context = {}
-     return render( request, 'show_2016/index.html', context)
-
+def pic_backs( request):
+     piclist = build_pic_list()
+     all_pics = piclist[ 'all_pics' ]
+     context = { 'all_pics' : all_pics }
+     return render( request, 'show_2016/pic_backs.html', context)
 
 
 

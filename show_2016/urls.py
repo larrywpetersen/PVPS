@@ -12,13 +12,13 @@ urlpatterns = [
 
     url( r'^list_entries$', views.list_entries, name='list_entries'),
 
-#    url( r'^list_pics$', views.list_pics, name='list_pics'),
-
     url( r'^list_pics/(?P<sortkey>[^/]*)$', views.list_pics, name='list_pics'),
 
     url( r'^detail/(?P<entryid>[0-9]*)$', views.detail, name='detial'),
 
     url( r'^wallcards$', views.print_wallcards, name='wallcards'),
+
+    url( r'^pic_backs$', views.pic_backs, name='pic_backs'),
 
 ]
 

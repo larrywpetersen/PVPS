@@ -70,7 +70,7 @@ table.wall {
     border: 2px solid white;
     border-collapse: separate;
     border-spacing: 10px;
-    width: 100%;
+    width: 65%;
 }
 
 tr.wall:hover  {
@@ -81,6 +81,7 @@ td.wall {
     text-align: left;
     border: 1px solid black;
     padding: 20px;
+    font-size: 10px;
 }
 
 
