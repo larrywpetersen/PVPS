@@ -20,7 +20,7 @@
   <table border="0" width="90%">
 
     <tr>
-      <td align="right">
+      <td align="right" width="110"">
 	<label for="1">Name:&nbsp;&nbsp;</label>
       </td><td align="left" colspan="3">
 	<input type="text" name="name" id="1" />
@@ -69,7 +69,7 @@
 
     <tr>
       <td align="right">
-	<label for="7">Phone Number:&nbsp;&nbsp;</label>
+	<label for="7">Phone #:&nbsp;&nbsp;</label>
       </td><td align="left" colspan="3">
 	<input type="text" name="phone" id="7" />
       </td>
@@ -92,9 +92,9 @@
 	<label for="1{{ i }}">
 	  {{ i }}&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;
 	  </label>
-      </td><td>
+      </td><td align="center">
 	<input type="text" name="pic{{ i }}_title" id="1{{ i }}" />
-      </td><td>
+      </td><td align="center">
 	<select name="pic{{ i }}_category">
 	  {% for category in all_categories %}
 	    <option value="{{ category.id }}">
@@ -102,13 +102,30 @@
 	  {% endfor %}
 	</select>
       </td>
-      <td>
+      <td align="center">
 	<input type="text" name="pic{{ i }}_price" id="2{{ i }}" />
       </td>
     </tr>
 
 {% endfor %}
 
+
+    <tr><td>&nbsp;</td><td colspan="3">&nbsp;</td></tr>
+
+    <tr>
+      <td>&nbsp;</td>
+
+      <td colspan="3">
+
+Exhibitor agrees not to hold the Pocatello Art Center or the Portneuf Valley Photographic 
+Society liable in any manner for, or
+on account of, any loss or damage sustained by 
+actions of any third party, fire, theft or the elements or any loss of an article from any 
+cause.  Nor are they liable for any injury to an exhibitor or guests.
+
+
+    </td></tr>
+    
 
     <tr><td>&nbsp;</td><td colspan="3">&nbsp;</td></tr>
 
@@ -124,7 +141,10 @@
 
 </form>
 
+  <br>
+  
 
+  
 </backquote>
 
 
